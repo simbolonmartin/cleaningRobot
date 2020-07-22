@@ -172,7 +172,7 @@ void convertVw_to_sendingSerial() {
 
 
   //for right wheel
-  int vr_beforeHex = -1 * vl_rpm / 3000 * 8192; // For moving forward, we need vr_rpm need to be negative, that's the opposite of 2 wheeled robot general kinematic's rule, thats why we need to multiply it by -1
+  int vr_beforeHex = -1 * vr_rpm / 3000 * 8192; // For moving forward, we need vr_rpm need to be negative, that's the opposite of 2 wheeled robot general kinematic's rule, thats why we need to multiply it by -1
   int vr_h = vr_beforeHex / 256;
   int vr_l = vr_beforeHex % 256;
 
