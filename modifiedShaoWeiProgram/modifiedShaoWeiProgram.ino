@@ -340,7 +340,7 @@ void return_Rspeed(float &re_rv)//接收回傳右輪速度
 {
   if(Serial3.available()>0)
   {
-    unsigned char data1 = Serial4.read();
+    unsigned char data1 = Serial3.read();
     //速度回授
     if(data1 == 0xe4 && count1==0)
     {
