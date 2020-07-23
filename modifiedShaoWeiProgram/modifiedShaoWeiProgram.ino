@@ -216,6 +216,9 @@ void two_wheel_kinematic(double V, double w, double &vl, double &vr)//二輪運�
 {
     vl = V - w*L/2;
     vr = V + w*L/2;
+
+    vl = vl/3;
+    vr = vr/3;
    
 //    Serial.print("send_vl:");
 //    Serial.println(vl);
