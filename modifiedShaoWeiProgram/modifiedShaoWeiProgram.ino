@@ -83,11 +83,11 @@ void setup()
     Serial4.begin(57600);//傳送接收左輪封包
     Serial3.begin(57600);//傳送接收右輪封包   
     myTimer.begin(return_encode,100000);//回傳封包給上層的timer
+  
+}
 
 
-
-    
-}  
+  
 void loop() 
 {   
          if(connection == con_check)//判斷有無斷線
@@ -119,12 +119,12 @@ void serialEvent()
     smart_motor_speed(vl, vr);
 }
 
-void serialEvent1()
+void serialEvent4()
 {
     return_Lspeed(re_lv);//取得左輪速度re_lv
 }
 
-void serialEvent2()
+void serialEvent3()
 {
     return_Rspeed(re_rv);//取得右輪速度re_lv
 }
@@ -202,7 +202,6 @@ void read_send_message()//收取封包
                 vx = re_vx - 100;//拿去用
                 vy = re_vy - 100;//拿去用
                 w = re_w - 100;//拿去用
-
             }
         }
         else
@@ -210,7 +209,6 @@ void read_send_message()//收取封包
             memset(databuf, 0, sizeof(databuf));
             count = 0;
         }
-
     }  
 }
 
